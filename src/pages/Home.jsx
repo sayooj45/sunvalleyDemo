@@ -11,14 +11,12 @@ import Footer from "../components/Footer";
 const Home = () => {
   return (
     <div className="font-jost">
-      <Navbar />
       <Hero />
       <BookingBar />
       <Experience />
       <WhyChooseUs />
       <Review />
       <Gallery />
-      <Footer />
     </div>
   );
 };

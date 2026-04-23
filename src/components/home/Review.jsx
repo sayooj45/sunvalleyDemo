@@ -1,5 +1,6 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const data = [
   {
@@ -25,29 +26,84 @@ const data = [
   },
 ];
 
+// stagger container
+const container = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+// card animation
+const card = {
+  hidden: { opacity: 0, y: 40, scale: 0.96 },
+  show: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+};
+
 const Review = () => {
   return (
-    <section className="bg-cream py-16 sm:py-20 px-4 sm:px-8 md:px-16">
+    <section className="bg-cream py-16 sm:py-20 px-4 sm:px-8 md:px-16 overflow-hidden">
       {/* Heading */}
-      <p className="text-[10px] sm:text-[11px] tracking-[0.25em] uppercase text-gold mb-3">
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+        className="text-[11px] tracking-[0.25em] uppercase text-gold mb-3"
+      >
         Guest Voices
-      </p>
+      </motion.p>
 
-      <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-greenDark mb-12 leading-tight">
+      <motion.h2
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+        viewport={{ once: true }}
+        className="font-serif text-3xl sm:text-4xl md:text-5xl text-greenDark mb-12 leading-tight"
+      >
         What Our Guests Say
-      </h2>
+      </motion.h2>
 
       {/* Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <motion.div
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+      >
         {data.map((item, i) => (
-          <div
+          <motion.div
             key={i}
-            className="bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300 p-6 flex flex-col"
+            variants={card}
+            whileHover={{ y: -6 }}
+            className="bg-white rounded-xl shadow-sm hover:shadow-lg transition duration-300 p-6 flex flex-col"
           >
             {/* Stars */}
             <div className="flex gap-1 text-gold mb-4">
               {[...Array(item.rating)].map((_, index) => (
-                <FaStar key={index} className="text-sm" />
+                <motion.div
+                  key={index}
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  transition={{
+                    delay: i * 0.2 + index * 0.05,
+                    type: "spring",
+                    stiffness: 200,
+                  }}
+                >
+                  <FaStar className="text-sm" />
+                </motion.div>
               ))}
             </div>
 
@@ -59,12 +115,15 @@ const Review = () => {
             {/* Reviewer */}
             <div className="flex items-center gap-3">
               {/* Avatar */}
-              <div className="w-10 h-10 rounded-full bg-greenLight text-white flex items-center justify-center text-sm font-semibold">
+              <motion.div
+                whileHover={{ scale: 1.1 }}
+                className="w-10 h-10 rounded-full bg-greenLight text-white flex items-center justify-center text-sm font-semibold"
+              >
                 {item.name
                   .split(" ")
                   .map((n) => n[0])
                   .join("")}
-              </div>
+              </motion.div>
 
               {/* Name + Location */}
               <div>
@@ -74,9 +133,9 @@ const Review = () => {
                 <p className="text-xs text-gray-500">{item.location}</p>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 };

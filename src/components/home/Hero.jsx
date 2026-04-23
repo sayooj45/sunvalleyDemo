@@ -1,49 +1,94 @@
 import React from "react";
+import { motion } from "framer-motion";
+import hero from "../images/home.jpeg";
+const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  show: (delay = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay,
+      duration: 0.8,
+      ease: "easeOut",
+    },
+  }),
+};
 
 const Hero = () => {
   return (
-    <section className="relative h-screen flex items-end pb-20 text-white">
+    <section className="relative h-screen flex items-end pb-20 text-white overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0">
-        <img
-          src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black/40"></div>
-      </div>
+      <motion.div
+        className="absolute inset-0"
+        initial={{ scale: 1.1 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 6, ease: "easeOut" }}
+      >
+        <img src={hero} className="w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-black/50"></div>
+      </motion.div>
 
       {/* Content */}
       <div className="relative z-10 px-6 md:px-16">
-        <p className="text-xs tracking-[0.2em] opacity-80 mb-4">
+        <motion.p
+          variants={fadeUp}
+          initial="hidden"
+          animate="show"
+          custom={0.2}
+          className="text-xs tracking-[0.2em] opacity-80 mb-4"
+        >
           Coonoor · Palakkad
-        </p>
+        </motion.p>
 
-        <h1 className="font-serif text-4xl md:text-6xl leading-tight mb-4">
+        <motion.h1
+          variants={fadeUp}
+          initial="hidden"
+          animate="show"
+          custom={0.4}
+          className="font-serif text-4xl md:text-6xl leading-tight mb-4"
+        >
           Where Nature <span className="italic text-green-300">Breathes</span>
           <br />
           and You Belong
-        </h1>
+        </motion.h1>
 
-        <p className="text-xs tracking-widest mb-6">
+        <motion.p
+          variants={fadeUp}
+          initial="hidden"
+          animate="show"
+          custom={0.6}
+          className="text-xs tracking-widest mb-6"
+        >
           Homestay · Farmstay · Restaurant
-        </p>
+        </motion.p>
 
-        <div className="flex gap-4">
-          <button className="border border-white px-6 py-2 text-xs uppercase">
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          animate="show"
+          custom={0.8}
+          className="flex gap-4"
+        >
+          <button className="border border-white px-6 py-2 text-xs uppercase hover:bg-white hover:text-black transition">
             Explore
           </button>
-          <button className="border border-white px-6 py-2 text-xs uppercase">
+          <button className="border border-white px-6 py-2 text-xs uppercase hover:bg-white hover:text-black transition">
             Contact
           </button>
-        </div>
+        </motion.div>
       </div>
 
       {/* Rating */}
-      <div className="absolute right-6 bottom-10 bg-white/20 backdrop-blur p-4 text-center">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1, duration: 0.8 }}
+        className="absolute right-6 bottom-10 bg-white/20 backdrop-blur p-4 text-center"
+      >
         <div>★</div>
         <div className="text-2xl font-serif">4.9</div>
         <p className="text-xs">Rating</p>
-      </div>
+      </motion.div>
     </section>
   );
 };

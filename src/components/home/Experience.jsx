@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const data = [
   {
@@ -24,64 +25,111 @@ const data = [
   },
 ];
 
+// Container for stagger effect
+const container = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+// Card animation
+const cardVariant = {
+  hidden: { opacity: 0, y: 50 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.7,
+      ease: "easeOut",
+    },
+  },
+};
+
 const Experience = () => {
   return (
     <section className="bg-[#f7f5f2] py-16 sm:py-20 px-4 sm:px-8 md:px-16">
       {/* Heading */}
-      <p className="text-[10px] sm:text-[11px] tracking-[0.25em] uppercase text-[#c9922a] mb-2 sm:mb-3">
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="text-[10px] tracking-[0.25em] uppercase text-[#c9922a] mb-3"
+      >
         What We Offer
-      </p>
+      </motion.p>
 
-      <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-green-900 mb-3 sm:mb-4 leading-tight">
+      <motion.h2
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+        viewport={{ once: true }}
+        className="font-serif text-3xl sm:text-4xl md:text-5xl text-green-900 mb-4 leading-tight"
+      >
         The Sun Valley Experience
-      </h2>
+      </motion.h2>
 
-      <p className="text-gray-500 max-w-xl mb-10 sm:mb-14 text-sm sm:text-base">
+      <motion.p
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="text-gray-500 max-w-xl mb-14 text-sm sm:text-base"
+      >
         Two unique destinations, one philosophy — nature, sustainability, and
         warmth.
-      </p>
+      </motion.p>
 
       {/* Cards Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+      <motion.div
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
+      >
         {data.map((item, i) => (
-          <div
+          <motion.div
             key={i}
-            className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition duration-300 flex flex-col"
+            variants={cardVariant}
+            whileHover={{ y: -8 }}
+            className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 flex flex-col"
           >
             {/* Image */}
             <div className="overflow-hidden">
-              <img
+              <motion.img
                 src={item.img}
                 alt={item.title}
-                className="w-full h-[200px] sm:h-[220px] object-cover transition-transform duration-500 hover:scale-105"
+                className="w-full h-[200px] sm:h-[220px] object-cover"
+                whileHover={{ scale: 1.08 }}
+                transition={{ duration: 0.5 }}
               />
             </div>
 
             {/* Content */}
             <div className="p-5 sm:p-6 flex flex-col flex-grow">
-              {/* Tag */}
-              <span className="text-[9px] sm:text-[10px] tracking-[0.18em] uppercase bg-gray-100 text-gray-600 px-3 py-1 rounded-full inline-block mb-3 sm:mb-4 w-fit">
+              <span className="text-[10px] tracking-[0.18em] uppercase bg-gray-100 text-gray-600 px-3 py-1 rounded-full inline-block mb-4 w-fit">
                 {item.location}
               </span>
 
-              {/* Title */}
               <h3 className="font-serif text-lg sm:text-xl text-green-900 mb-2">
                 {item.title}
               </h3>
 
-              {/* Description */}
               <p className="text-sm text-gray-500 leading-relaxed flex-grow">
                 {item.desc}
               </p>
 
-              {/* Button */}
-              <button className="mt-5 w-fit text-[10px] sm:text-[11px] tracking-[0.18em] uppercase border border-green-900 text-green-900 px-4 py-2 hover:bg-green-900 hover:text-white transition">
+              <button className="mt-5 w-fit text-[11px] tracking-[0.18em] uppercase border border-green-900 text-green-900 px-4 py-2 hover:bg-green-900 hover:text-white transition">
                 {item.link}
               </button>
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 };

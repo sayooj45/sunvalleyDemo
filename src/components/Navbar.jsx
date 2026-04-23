@@ -1,77 +1,89 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    "Home",
-    "About Us",
-    "Our Stays",
-    "Restaurant",
-    "Experiences",
-    "Contact",
+    { name: "Home", path: "/" },
+    { name: "About Us", path: "/about" },
+    { name: "Our Stays", path: "/stay" },
+    { name: "Restaurant", path: "/restaurant" },
+    { name: "Experiences", path: "/experiences" },
+    { name: "Contact", path: "/contact" },
   ];
 
   return (
-    <nav className="w-full bg-white shadow-md fixed top-0 left-0 z-50">
+    <nav className="w-full fixed top-0 left-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center">
-            <img src="/logo.png" alt="Sun Valley" className="h-10 w-auto" />
-          </div>
+          <img src="/logo.png" alt="Sun Valley" className="h-10" />
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link, index) => (
-              <a
+              <NavLink
                 key={index}
-                href="#"
-                className="text-gray-700 hover:text-green-700 font-medium text-sm tracking-wide"
+                to={link.path}
+                className={({ isActive }) =>
+                  `group relative text-sm font-medium uppercase tracking-wide transition duration-300 
+                  ${
+                    isActive
+                      ? "text-greenDark"
+                      : "text-gray-600 hover:text-black"
+                  }`
+                }
               >
-                {link.toUpperCase()}
-              </a>
+                {link.name}
+
+                {/* Animated underline */}
+                <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-amber-500 transition-all duration-300 group-hover:w-full"></span>
+              </NavLink>
             ))}
           </div>
 
-          {/* Enquire Button */}
+          {/* CTA Button */}
           <div className="hidden md:block">
-            <button className="bg-green-800 text-white px-5 py-2 text-sm font-semibold rounded hover:bg-green-900 transition">
-              ENQUIRE NOW
+            <button className="relative overflow-hidden bg-greenDark text-white px-5 py-2 text-sm font-semibold rounded group">
+              <span className="relative z-10">ENQUIRE NOW</span>
+
+              {/* Hover animation */}
+              <span className="absolute inset-0 bg-greenMid translate-y-full group-hover:translate-y-0 transition duration-300"></span>
             </button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="md:hidden">
-            <button onClick={() => setIsOpen(!isOpen)}>
-              {isOpen ? <X size={28} /> : <Menu size={28} />}
-            </button>
-          </div>
+          {/* Mobile Toggle */}
+          <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
+            {isOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
         </div>
       </div>
 
       {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden bg-white shadow-lg">
-          <div className="flex flex-col items-center space-y-4 py-6">
-            {navLinks.map((link, index) => (
-              <a
-                key={index}
-                href="#"
-                className="text-gray-700 text-sm font-medium hover:text-green-700"
-                onClick={() => setIsOpen(false)}
-              >
-                {link.toUpperCase()}
-              </a>
-            ))}
+      <div
+        className={`md:hidden bg-white overflow-hidden transition-all duration-500 ${
+          isOpen ? "max-h-[400px] py-6" : "max-h-0"
+        }`}
+      >
+        <div className="flex flex-col items-center gap-5">
+          {navLinks.map((link, index) => (
+            <NavLink
+              key={index}
+              to={link.path}
+              onClick={() => setIsOpen(false)}
+              className="text-gray-700 text-sm uppercase tracking-wide hover:text-greenDark transition"
+            >
+              {link.name}
+            </NavLink>
+          ))}
 
-            <button className="bg-green-800 text-white px-6 py-2 text-sm font-semibold rounded hover:bg-green-900">
-              ENQUIRE NOW
-            </button>
-          </div>
+          <button className="bg-greenDark text-white px-6 py-2 text-sm font-semibold rounded hover:bg-greenMid transition">
+            ENQUIRE NOW
+          </button>
         </div>
-      )}
+      </div>
     </nav>
   );
 }
