@@ -1,11 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
-
+import homestay from "../images/home/homestay.jpg";
+import restaurent from "../images/home/restaurent.jpg";
 const data = [
   {
     title: "Homestay",
     location: "COONOOR · NILGIRIS",
-    img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
+    img: homestay,
     desc: "A serene retreat in the hills of Coonoor, surrounded by tea gardens and misty mountains.",
     link: "View Rooms",
   },
@@ -19,7 +20,7 @@ const data = [
   {
     title: "Restaurant",
     location: "FARM TO TABLE",
-    img: "https://images.unsplash.com/photo-1562967916-eb82221dfb36",
+    img: restaurent,
     desc: "Fresh, organic food grown on-site. Traditional Kerala and Nilgiri flavours served with love.",
     link: "View Menu",
   },

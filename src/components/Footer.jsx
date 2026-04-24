@@ -17,6 +17,15 @@ const item = {
   show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
 };
 
+const navLinks = [
+  { name: "Home", path: "/" },
+  { name: "About Us", path: "/about" },
+  { name: "Our Stays", path: "/stay" },
+  { name: "Restaurant", path: "/restaurant" },
+  { name: "Experiences", path: "/experiences" },
+  { name: "Contact", path: "/contact" },
+];
+
 const Footer = () => {
   return (
     <footer className="bg-greenDark text-white px-6 md:px-16 pt-16 pb-8">
@@ -58,20 +67,13 @@ const Footer = () => {
           </h4>
 
           <ul className="space-y-2 text-sm text-white/70">
-            {[
-              "Home",
-              "About Us",
-              "Our Stays",
-              "Restaurant",
-              "Experiences",
-              "Contact",
-            ].map((text, i) => (
+            {navLinks.map((link, i) => (
               <li key={i}>
                 <Link
-                  to="/"
+                  to={link.path}
                   className="hover:text-white transition relative group"
                 >
-                  {text}
+                  {link.name}
                   <span className="block h-[1px] w-0 bg-white transition-all group-hover:w-full"></span>
                 </Link>
               </li>

@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-
+import about from "../images/about/about.jpg";
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
   show: (i = 1) => ({
@@ -121,7 +121,7 @@ const Hero = () => {
           className="order-1 lg:order-2"
         >
           <motion.img
-            src="https://images.unsplash.com/photo-1500076656116-558758c991c1?w=900&q=80"
+            src={about}
             alt="Sun Valley"
             className="w-full 
                        h-[260px] sm:h-[320px] md:h-[400px] lg:h-[520px] 

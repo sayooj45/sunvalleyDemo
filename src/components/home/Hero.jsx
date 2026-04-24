@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import hero from "../images/home.jpeg";
+import hero from "../images/home/home.jpeg";
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
   show: (delay = 0) => ({

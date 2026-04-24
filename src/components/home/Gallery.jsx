@@ -1,14 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
-
-const images = [
-  "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b",
-  "https://images.unsplash.com/photo-1506905925346-21bda4d32df4",
-  "https://images.unsplash.com/photo-1506368249639-73a05d6f6488",
-  "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
-  "https://images.unsplash.com/photo-1448375240586-882707db888b",
-  "https://images.unsplash.com/photo-1448375240586-882707db888b",
-];
+import gallery1 from "../images/home/gallery1.jpg";
+import gallery2 from "../images/home/gallery2.jpg";
+import gallery3 from "../images/home/gallery3.jpg";
+import gallery4 from "../images/home/gallery4.jpg";
+import gallery5 from "../images/home/gallery5.jpg";
+import gallery6 from "../images/home/gallery6.jpg";
+const images = [gallery2, gallery1, gallery3, gallery4, gallery5, gallery6];
 
 // container stagger
 const container = {

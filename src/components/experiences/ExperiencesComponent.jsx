@@ -1,17 +1,20 @@
 import React from "react";
 import { motion } from "framer-motion";
 import ActivityCard from "./ActivityCard";
-
+import bird from "../images/experience/bird.jpg";
+import walk from "../images/experience/walk.jpg";
+import nature from "../images/experience/nature.jpg";
+import evg from "../images/experience/evg.jpg";
 const activities = [
   {
     title: "Nature Trekking",
     desc: "Guided trails through tea gardens, forests, and hilltops of Coonoor.",
-    img: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=80",
+    img: nature,
   },
   {
     title: "Farm Walk & Harvest",
     desc: "Explore the organic farm and learn sustainable farming.",
-    img: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80",
+    img: walk,
   },
   {
     title: "Yoga & Meditation",
@@ -26,12 +29,12 @@ const activities = [
   {
     title: "Bird Watching",
     desc: "Spot Nilgiri and Palakkad birds with expert guidance.",
-    img: "https://images.unsplash.com/photo-1444464666168-49d633b86797?w=600&q=80",
+    img: bird,
   },
   {
     title: "Bonfire Evenings",
     desc: "Music, stories, and starlit nights around the fire.",
-    img: "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=600&q=80",
+    img: evg,
   },
 ];
 

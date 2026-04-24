@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-
+import main from "../images/stay/main.jpg";
+import garden from "../images/stay/garden.jpg";
 const stays = [
   {
     location: "Coonoor · Nilgiris · Tamil Nadu",
@@ -10,12 +11,12 @@ const stays = [
     rooms: [
       {
         name: "Main Block",
-        img: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=700&q=80",
+        img: main,
         tags: ["En-suite Bath", "Mountain View", "Hot Water"],
       },
       {
         name: "Garden Room",
-        img: "https://images.unsplash.com/photo-1540518614846-7eded433c457?w=700&q=80",
+        img: garden,
         tags: ["Private Garden", "WiFi", "Breakfast"],
       },
     ],
