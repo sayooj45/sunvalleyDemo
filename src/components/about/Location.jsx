@@ -1,5 +1,6 @@
 import React from "react";
 import homestay from "../images/about/homestay.jpg";
+import farmstay from "../images/about/farmstay.jpg";
 const Location = () => {
   return (
     <section className="px-6 md:px-16 py-16 bg-cream">
@@ -26,10 +27,7 @@ const Location = () => {
 
         <div className="bg-white shadow rounded overflow-hidden ">
           <div className="aspect-[4/2] w-full overflow-hidden">
-            <img
-              src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&q=80"
-              className="w-full h-full object-cover"
-            />
+            <img src={farmstay} className="w-full h-full object-cover" />
           </div>
           <div className="p-6">
             <h3 className="font-serif text-xl mb-2">Farmstay — Palakkad</h3>

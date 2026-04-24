@@ -22,39 +22,43 @@ const item = {
 const Menu = () => {
   const menuData = [
     {
-      title: "Breakfast",
+      title: "Tiffin Items",
       items: [
-        { name: "Puttu & Kadala Curry", price: "₹120" },
-        { name: "Idiyappam & Egg Curry", price: "₹130" },
-        { name: "Farm Omelette Toast", price: "₹100" },
-        { name: "Porridge & Fresh Fruits", price: "₹90" },
+        { name: "Idly (1 set)", price: "₹130" },
+        { name: "Plain Dosa", price: "₹50" },
+        { name: "Variety Dosa", price: "₹60" },
+        { name: "Poori Masala / Bhatura", price: "₹150" },
+        { name: "Uthappam", price: "₹60" },
       ],
     },
     {
-      title: "Lunch",
+      title: "Rice Items",
       items: [
-        { name: "Kerala Sadya (Veg)", price: "₹250" },
-        { name: "Rice & Fish Curry", price: "₹280" },
-        { name: "Farm Veg Thali", price: "₹200" },
-        { name: "Meen Pollichathu", price: "₹320" },
+        { name: "Chicken Fried Rice", price: "₹250" },
+        { name: "Egg Fried Rice", price: "₹240" },
+        { name: "Chicken Biriyani", price: "₹280" },
+        { name: "Veg Peas Pulav/ Biriyani", price: "₹220" },
+        { name: "Veg Meals", price: "₹250" },
       ],
     },
     {
-      title: "Dinner",
+      title: "Main Course",
       items: [
-        { name: "Karimeen Fry & Rice", price: "₹350" },
-        { name: "Chicken Stew & Appam", price: "₹300" },
-        { name: "Organic Veg Curry Set", price: "₹220" },
-        { name: "Dal Tadka & Chapati", price: "₹180" },
+        { name: "Paneer Butter Masala", price: "₹240" },
+        { name: "Aloo Jeera Fry", price: "₹160" },
+        { name: "Butter Chicken Masala", price: "₹280" },
+        { name: "Kerala Chicken Curry", price: "₹250" },
+        { name: "Chicken Chettinad", price: "₹250" },
       ],
     },
     {
-      title: "Drinks & Snacks",
+      title: "Beverage",
       items: [
-        { name: "Fresh Coconut Water", price: "₹60" },
-        { name: "Farm Lemonade", price: "₹70" },
-        { name: "Masala Chai", price: "₹50" },
-        { name: "Seasonal Juice", price: "₹80" },
+        { name: "Tea", price: "₹40" },
+        { name: "Masala Tea", price: "₹45" },
+        { name: "Lemon tea", price: "₹45" },
+        { name: "Mint Lemon ( Soda / Juice)", price: "₹150" },
+        { name: "Milkshake", price: "₹180" },
       ],
     },
   ];

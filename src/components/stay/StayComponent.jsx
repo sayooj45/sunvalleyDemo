@@ -2,6 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import main from "../images/stay/main.jpg";
 import garden from "../images/stay/garden.jpg";
+import hut from "../images/stay/hut.jpg";
+import cottage from "../images/stay/cottage.jpg";
 const stays = [
   {
     location: "Coonoor · Nilgiris · Tamil Nadu",
@@ -38,12 +40,12 @@ const stays = [
     rooms: [
       {
         name: "Farm Cottage",
-        img: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=700&q=80",
+        img: cottage,
         tags: ["Farm View", "Open Verandah", "AC / Fan"],
       },
       {
         name: "Garden Hut",
-        img: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=700&q=80",
+        img: hut,
         tags: ["Eco Design", "Farm Access", "Organic Meals"],
       },
     ],

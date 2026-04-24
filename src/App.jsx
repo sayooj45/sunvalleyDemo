@@ -8,11 +8,12 @@ import OurStays from "./pages/OurStays";
 import Restaurant from "./pages/Restaurant";
 import Experiences from "./pages/Experiences";
 import Contact from "./pages/Contact";
-
+import ScrollToTop from "./components/ScrollTOTop";
 function App() {
   return (
     <BrowserRouter>
       <Navbar />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

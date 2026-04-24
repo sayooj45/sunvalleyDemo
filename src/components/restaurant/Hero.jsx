@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import restaurent from "../images/restaurent/restaurent.jpg";
+import restaurant from "../images/restaurant/restaurant.jpg";
 const textVariant = {
   hidden: { opacity: 0, y: 40 },
   show: { opacity: 1, y: 0, transition: { duration: 0.7 } },
@@ -71,7 +71,7 @@ const Hero = () => {
         className="overflow-hidden rounded-xl"
       >
         <img
-          src={restaurent}
+          src={restaurant}
           alt="Farm to table food"
           className="w-full h-[280px] sm:h-[350px] md:h-[450px] object-cover transition duration-700 hover:scale-105"
         />

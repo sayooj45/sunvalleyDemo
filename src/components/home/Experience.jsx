@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import homestay from "../images/home/homestay.jpg";
+import farmstay from "../images/home/farmstay.jpg";
 import restaurent from "../images/home/restaurent.jpg";
 const data = [
   {
@@ -13,7 +14,7 @@ const data = [
   {
     title: "Farmstay",
     location: "PALAKKAD · KERALA",
-    img: "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    img: farmstay,
     desc: "Authentic rural life in Chittur, Palakkad — organic farming, open skies, warm hospitality.",
     link: "View Cottages",
   },

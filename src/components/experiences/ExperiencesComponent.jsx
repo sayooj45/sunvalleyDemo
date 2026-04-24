@@ -5,6 +5,8 @@ import bird from "../images/experience/bird.jpg";
 import walk from "../images/experience/walk.jpg";
 import nature from "../images/experience/nature.jpg";
 import evg from "../images/experience/evg.jpg";
+import kidsRoom from "../images/experience/kidsRoom.jpg";
+import gym from "../images/experience/gym.jpg";
 const activities = [
   {
     title: "Nature Trekking",
@@ -17,14 +19,14 @@ const activities = [
     img: walk,
   },
   {
-    title: "Yoga & Meditation",
-    desc: "Morning sessions guided by our wellness practitioner.",
-    img: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&q=80",
+    title: "Kids Play Room",
+    desc: "A cheerful and safe indoor space where children can play, learn, and have fun while parents relax.",
+    img: kidsRoom,
   },
   {
-    title: "Cooking Class",
-    desc: "Learn authentic Kerala recipes using fresh ingredients.",
-    img: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80",
+    title: "Gym & Fitness",
+    desc: "A well-equipped space to maintain your workout routine during your stay.",
+    img: gym,
   },
   {
     title: "Bird Watching",
