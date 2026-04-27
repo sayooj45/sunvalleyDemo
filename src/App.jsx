@@ -9,6 +9,7 @@ import Restaurant from "./pages/Restaurant";
 import Experiences from "./pages/Experiences";
 import Contact from "./pages/Contact";
 import ScrollToTop from "./components/ScrollTOTop";
+import FarmStay from "./pages/FarmStay";
 function App() {
   return (
     <BrowserRouter>
@@ -16,11 +17,12 @@ function App() {
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/stay" element={<OurStays />} />
-        <Route path="/restaurant" element={<Restaurant />} />
-        <Route path="/experiences" element={<Experiences />} />
+        {/* <Route path="/about" element={<About />} /> */}
+        <Route path="/accommodation" element={<OurStays />} />
+        {/* <Route path="/restaurant" element={<Restaurant />} /> */}
+        {/* <Route path="/experiences" element={<Experiences />} /> */}
         <Route path="/contact" element={<Contact />} />
+        <Route path="/farm-stay" element={<FarmStay />} />
       </Routes>
       <Footer />
     </BrowserRouter>

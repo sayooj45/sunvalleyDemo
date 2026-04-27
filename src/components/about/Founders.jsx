@@ -2,7 +2,7 @@ import React from "react";
 
 const Founders = () => {
   return (
-    <section className="px-6 md:px-16 py-16">
+    <section className=" bg-cream px-6 md:px-16 py-16">
       <p className="text-xs tracking-widest text-yellow-600 mb-4 uppercase">
         The People Behind Sun Valley
       </p>
@@ -12,7 +12,7 @@ const Founders = () => {
       </h2>
 
       <div className="grid md:grid-cols-2 gap-6">
-        <div className="bg-cream p-6 flex gap-4 rounded">
+        <div className="bg-[#f7f5f2] p-6 flex gap-4 rounded">
           <div className="w-16 h-16 bg-green-700 text-white flex items-center justify-center rounded-full text-xl">
             S
           </div>
@@ -27,7 +27,7 @@ const Founders = () => {
           </div>
         </div>
 
-        <div className="bg-cream p-6 flex gap-4 rounded">
+        <div className="bg-[#f7f5f2] p-6 flex gap-4 rounded">
           <div className="w-16 h-16 bg-yellow-600 text-white flex items-center justify-center rounded-full text-xl">
             D
           </div>

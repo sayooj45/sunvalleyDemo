@@ -1,18 +1,19 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
     { name: "Home", path: "/" },
-    { name: "About Us", path: "/about" },
-    { name: "Our Stays", path: "/stay" },
-    { name: "Restaurant", path: "/restaurant" },
-    { name: "Experiences", path: "/experiences" },
+    // { name: "About Us", path: "/about" },
+    { name: "Accommodation", path: "/accommodation" },
+    // { name: "Restaurant", path: "/restaurant" },
+    // { name: "Experiences", path: "/experiences" },
     { name: "Contact", path: "/contact" },
   ];
+  const navigate = useNavigate();
 
   return (
     <nav className="w-full fixed top-0 left-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200">
@@ -46,7 +47,12 @@ export default function Navbar() {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <button className="relative overflow-hidden bg-greenDark text-white px-5 py-2 text-sm font-semibold rounded group">
+            <button
+              className="relative overflow-hidden bg-greenDark text-white px-5 py-2 text-sm font-semibold rounded group"
+              onClick={() => {
+                navigate("/contact");
+              }}
+            >
               <span className="relative z-10">ENQUIRE NOW</span>
 
               {/* Hover animation */}

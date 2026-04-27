@@ -4,6 +4,7 @@ import main from "../images/stay/main.jpg";
 import garden from "../images/stay/garden.jpg";
 import hut from "../images/stay/hut.jpg";
 import cottage from "../images/stay/cottage.jpg";
+import { useNavigate } from "react-router-dom";
 const stays = [
   {
     location: "Coonoor · Nilgiris · Tamil Nadu",
@@ -35,31 +36,39 @@ const stays = [
   {
     location: "Chittur · Palakkad · Kerala",
     name: "Sunvalley Farmstay",
-    tagline: "Rural tranquility and organic farm life in Palakkad",
+    tagline:
+      "Sunvalley Farmstay — Where nature, family, and authentic farm life come together.",
     btn: "Enquire for Farmstay",
     rooms: [
       {
-        name: "Farm Cottage",
-        img: cottage,
+        name: "Mithila Room",
+        img: "https://sunvalleyfarmstay.com/images/mithila2.png",
         tags: ["Farm View", "Open Verandah", "AC / Fan"],
       },
       {
-        name: "Garden Hut",
-        img: hut,
+        name: "Dwarka Deluxe Room",
+        img: "https://sunvalleyfarmstay.com/images/204.png",
         tags: ["Eco Design", "Farm Access", "Organic Meals"],
       },
     ],
     highlights: [
-      "Paddy Farm Walk",
-      "Veg Picking",
-      "Cooking Class",
-      "Bird Watching",
+      "Farm-to-table",
+      "Organic meals",
+      "Fruit plantations",
+      "Custom dishes",
+      "Rural experience",
+      "Petting animals",
+      "Fish feeding",
+      "Fishing",
+      "Nature walks",
     ],
     highlightBg: "bg-orange-50",
   },
 ];
 
 const StayComponent = () => {
+  const navigate = useNavigate();
+
   return (
     <section className=" py-12 md:py-16 px-4 md:px-10 lg:px-16 space-y-10">
       {stays.map((stay, i) => (
@@ -87,7 +96,10 @@ const StayComponent = () => {
               </p>
             </div>
 
-            <button className="relative overflow-hidden group border border-green-900 text-green-900 px-6 py-2 text-xs tracking-[0.18em] uppercase">
+            <button
+              className="relative overflow-hidden group border border-green-900 text-green-900 px-6 py-2 text-xs tracking-[0.18em] uppercase"
+              onClick={() => navigate("/farm-stay")}
+            >
               <span className="relative z-10 group-hover:text-white transition">
                 {stay.btn}
               </span>

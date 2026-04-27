@@ -19,10 +19,10 @@ const item = {
 
 const navLinks = [
   { name: "Home", path: "/" },
-  { name: "About Us", path: "/about" },
-  { name: "Our Stays", path: "/stay" },
-  { name: "Restaurant", path: "/restaurant" },
-  { name: "Experiences", path: "/experiences" },
+  // { name: "About Us", path: "/about" },
+  { name: "Accommodation", path: "/accommodation" },
+  // { name: "Restaurant", path: "/restaurant" },
+  // { name: "Experiences", path: "/experiences" },
   { name: "Contact", path: "/contact" },
 ];
 
@@ -88,12 +88,7 @@ const Footer = () => {
           </h4>
 
           <ul className="space-y-2 text-sm text-white/70">
-            {[
-              "Homestay — Coonoor",
-              "Farmstay — Palakkad",
-              "Restaurant",
-              "Experiences",
-            ].map((text, i) => (
+            {["Homestay — Coonoor", "Farmstay — Palakkad"].map((text, i) => (
               <li
                 key={i}
                 className="hover:text-white transition cursor-pointer"

@@ -2,7 +2,7 @@ import React from "react";
 
 const BookingBar = () => {
   return (
-    <div className="bg-[#f7f5f2] border-y border-gray-200 px-6 md:px-16 py-6">
+    <div className=" border-y border-gray-200 px-6 md:px-16 py-6">
       <form className="flex flex-wrap md:flex-nowrap items-end gap-4">
         {/* Stay Type */}
         <div className="flex flex-col flex-1 min-w-[180px]">
