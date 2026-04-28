@@ -20,7 +20,7 @@ const item = {
 const navLinks = [
   { name: "Home", path: "/" },
   // { name: "About Us", path: "/about" },
-  { name: "Accommodation", path: "/accommodation" },
+  { name: "Retreat", path: "/retreat" },
   // { name: "Restaurant", path: "/restaurant" },
   // { name: "Experiences", path: "/experiences" },
   { name: "Contact", path: "/contact" },
@@ -38,7 +38,7 @@ const Footer = () => {
       >
         {/* BRAND */}
         <motion.div variants={item}>
-          <h3 className="font-serif text-2xl mb-4">Sun Valley</h3>
+          <img src="/logo.png" alt="Sun Valley" className="h-10 mb-4" />
 
           <p className="text-sm text-white/70 leading-relaxed">
             A sustainable hospitality brand with two distinct stays — Homestay

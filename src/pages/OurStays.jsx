@@ -7,10 +7,10 @@ const OurStays = () => {
       {/* PAGE HEADER */}
       <div className="px-6 md:px-16 mb-10">
         <p className="text-[11px] tracking-[0.25em] uppercase text-yellow-600 mb-2">
-          Our Stays
+          WHERE YOU'LL STAY
         </p>
         <h1 className="font-serif text-3xl md:text-5xl text-greenDark">
-          Two Destinations, One Experience
+          Two Homes, One Heart
         </h1>
       </div>
 

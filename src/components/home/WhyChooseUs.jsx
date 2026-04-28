@@ -79,7 +79,7 @@ const WhyChooseUs = () => {
         viewport={{ once: true }}
         className="font-serif text-3xl sm:text-4xl md:text-5xl text-white mb-12 leading-tight"
       >
-        The Sun Valley Difference
+        What Makes Sun Valley Special
       </motion.h2>
 
       {/* Grid */}

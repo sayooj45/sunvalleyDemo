@@ -82,7 +82,7 @@ const RoomRow = ({ room, reverse }) => {
         <p className="text-white/60 text-sm md:text-base leading-relaxed mb-6">
           {room.desc}
         </p>
-
+        {/* 
         <button
           className="text-gl text-sm uppercase tracking-widest border-b border-gl/50 pb-1 hover:opacity-80 transition"
           onClick={() => {
@@ -90,7 +90,7 @@ const RoomRow = ({ room, reverse }) => {
           }}
         >
           Book Now →
-        </button>
+        </button> */}
       </div>
     </motion.div>
   );

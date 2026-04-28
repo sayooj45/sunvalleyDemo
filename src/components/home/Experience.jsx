@@ -2,28 +2,24 @@ import React from "react";
 import { motion } from "framer-motion";
 import homestay from "../images/home/homestay.jpg";
 import farmstay from "../images/home/farmstay.jpg";
-import restaurent from "../images/home/restaurent.jpg";
+import { useNavigate } from "react-router-dom";
+
 const data = [
   {
     title: "Homestay",
     location: "COONOOR · NILGIRIS",
     img: homestay,
     desc: "A serene retreat in the hills of Coonoor, surrounded by tea gardens and misty mountains.",
-    link: "View Rooms",
+    button: "View Rooms",
+    link: "/home-stay",
   },
   {
     title: "Farmstay",
     location: "PALAKKAD · KERALA",
     img: farmstay,
     desc: "Authentic rural life in Chittur, Palakkad — organic farming, open skies, warm hospitality.",
-    link: "View Cottages",
-  },
-  {
-    title: "Restaurant",
-    location: "FARM TO TABLE",
-    img: restaurent,
-    desc: "Fresh, organic food grown on-site. Traditional Kerala and Nilgiri flavours served with love.",
-    link: "View Menu",
+    button: "View Rooms",
+    link: "/farm-stay",
   },
 ];
 
@@ -51,6 +47,7 @@ const cardVariant = {
 };
 
 const Experience = () => {
+  const navigate = useNavigate();
   return (
     <section className="bg-[#f7f5f2] py-16 sm:py-20 px-4 sm:px-8 md:px-16">
       {/* Heading */}
@@ -91,7 +88,7 @@ const Experience = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 sm:gap-8"
       >
         {data.map((item, i) => (
           <motion.div
@@ -125,8 +122,11 @@ const Experience = () => {
                 {item.desc}
               </p>
 
-              <button className="mt-5 w-fit text-[11px] tracking-[0.18em] uppercase border border-green-900 text-green-900 px-4 py-2 hover:bg-green-900 hover:text-white transition">
-                {item.link}
+              <button
+                className="mt-5 w-fit text-[11px] tracking-[0.18em] uppercase border border-green-900 text-green-900 px-4 py-2 hover:bg-green-900 hover:text-white transition"
+                onClick={() => navigate(item.link)}
+              >
+                {item.button}
               </button>
             </div>
           </motion.div>

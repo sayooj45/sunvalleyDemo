@@ -8,7 +8,7 @@ export default function Navbar() {
   const navLinks = [
     { name: "Home", path: "/" },
     // { name: "About Us", path: "/about" },
-    { name: "Accommodation", path: "/accommodation" },
+    { name: "Retreat", path: "/retreat" },
     // { name: "Restaurant", path: "/restaurant" },
     // { name: "Experiences", path: "/experiences" },
     { name: "Contact", path: "/contact" },

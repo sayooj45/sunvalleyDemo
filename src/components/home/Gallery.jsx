@@ -42,7 +42,7 @@ const Gallery = () => {
         viewport={{ once: true }}
         className="text-[10px] tracking-[0.25em] uppercase text-gold mb-3"
       >
-        Gallery
+        THROUGH OUR LENS
       </motion.p>
 
       <motion.h2
@@ -52,7 +52,7 @@ const Gallery = () => {
         viewport={{ once: true }}
         className="font-serif text-3xl sm:text-4xl md:text-5xl text-greenDark mb-10"
       >
-        A Glimpse of Sun Valley
+        Picture Yourself Here
       </motion.h2>
 
       {/* Grid */}

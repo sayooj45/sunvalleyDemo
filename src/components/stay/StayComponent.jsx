@@ -1,168 +1,240 @@
 import React from "react";
 import { motion } from "framer-motion";
-import main from "../images/stay/main.jpg";
-import garden from "../images/stay/garden.jpg";
-import hut from "../images/stay/hut.jpg";
-import cottage from "../images/stay/cottage.jpg";
 import { useNavigate } from "react-router-dom";
+
 const stays = [
   {
     location: "Coonoor · Nilgiris · Tamil Nadu",
     name: "Sunvalley Homestay",
-    tagline:
-      "Experience comfort and luxury at Sunvalley Homestay Coonoor with elegant rooms, modern amenities, and a peaceful stay perfect for solo or family trips.",
+    description:
+      "Nestled in the misty hills of Coonoor, Sunvalley Homestay offers elegantly furnished rooms with modern amenities in a clean, serene environment. Surrounded by tea gardens and mountain air, it's the perfect retreat for solo travelers, couples, and families seeking a genuine hill-station escape.",
     btn: "Enquire for Homestay",
     link: "/home-stay",
+    contactEmail: "sunvalleyhomestay@gmail.com",
+    contactPhone: "+91 95825 98568",
+    quote: "Where every morning begins with mountain mist.",
     rooms: [
       {
         name: "Valley View Pent House",
         img: "https://sunvalleyhomestay.com/wp-content/uploads/2023/07/valley-view-pent-house2.jpg",
-        tags: ["En-suite Bath", "Mountain View", "Hot Water"],
       },
       {
-        name: "Valley view Executive Room",
-        img: "https://sunvalleyhomestay.com/wp-content/uploads/2021/12/Sunvalley-Homestay-couple-room-1920x1280.jpg",
-        tags: ["Private Garden", "WiFi", "Breakfast"],
+        name: "Valley View Deluxe Room",
+        img: "https://sunvalleyhomestay.com/wp-content/uploads/2021/12/valley-view-deluxe-family3-1920x1280.jpg",
+      },
+      {
+        name: "Earthly Living Valley Room",
+        img: "https://sunvalleyhomestay.com/wp-content/uploads/2023/07/EarthyLivingDeluxe4.jpg",
+      },
+      {
+        name: "Valley View Executive Room",
+        img: "https://sunvalleyhomestay.com/wp-content/uploads/2021/12/valley-view-executive4-1920x1280.jpg",
       },
     ],
     highlights: [
       "Picnic Spot",
       "Hill-station",
       "Lamb's Rock",
-      "View point",
+      "View Point",
       "Boating",
-      "Swiming",
-      "Tea Planatation",
+      "Swimming",
+      "Tea Plantation",
       "Ketti Valley",
     ],
-    highlightBg: "bg-green-50",
   },
   {
     location: "Chittur · Palakkad · Kerala",
     name: "Sunvalley Farmstay",
-    tagline:
-      "Sunvalley Farmstay — Where nature, family, and authentic farm life come together.",
+    description:
+      "Spread across 10 acres in Chittur, Palakkad, Sunvalley Farmstay is a family-owned sustainable farm with 25-year-old twin farmhouses. Feed lambs, calves, ducks and emus, taste farm-fresh organic food, and reconnect with authentic Kerala rural life — a perfect getaway for the young and young at heart.",
     btn: "Enquire for Farmstay",
     link: "/farm-stay",
+    contactEmail: "sunvalleyfarmstay@gmail.com",
+    contactPhone: "+91 88258 77432",
+    quote: "Where farm life meets heartfelt hospitality.",
     rooms: [
       {
         name: "Mithila Room",
         img: "https://sunvalleyfarmstay.com/images/mithila2.png",
-        tags: ["Farm View", "Open Verandah", "AC / Fan"],
+      },
+      {
+        name: "Dwarka Room",
+        img: "https://sunvalleyfarmstay.com/images/Dwaraka2.png",
       },
       {
         name: "Dwarka Deluxe Room",
         img: "https://sunvalleyfarmstay.com/images/204.png",
-        tags: ["Eco Design", "Farm Access", "Organic Meals"],
+      },
+      {
+        name: "Farm View",
+        img: "https://www.sunvalleyfarmstay.com/images/gallery/53.jpg",
       },
     ],
     highlights: [
-      "Farm-to-table",
-      "Organic meals",
-      "Fruit plantations",
-      "Custom dishes",
-      "Rural experience",
-      "Petting animals",
-      "Fish feeding",
-      "Fishing",
-      "Nature walks",
+      "Natural Pool",
+      "Animal Feeding",
+      "Petting Zoo",
+      "Farm Activities",
+      "Hammock Relaxing",
+      "Peaceful Escape",
+      "Jeep Safari",
+      "Village Visits",
+      "Mango Orchards",
+      "Temple Tours",
+      "Cultural Festivals",
+      "Farm Life",
+      "Bonfire Nights",
+      "Barbecue Evenings",
+      "Kids Fun",
+      "Nature Living",
     ],
-    highlightBg: "bg-orange-50",
   },
 ];
+
+const container = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.18,
+    },
+  },
+};
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 45 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.7,
+      ease: "easeOut",
+    },
+  },
+};
 
 const StayComponent = () => {
   const navigate = useNavigate();
 
   return (
-    <section className=" py-12 md:py-16 px-4 md:px-10 lg:px-16 space-y-10">
+    <section className="bg-[#eef2ee] py-12 md:py-16 space-y-16 md:space-y-24 px-4 sm:px-6 md:px-10">
       {stays.map((stay, i) => (
         <motion.div
           key={i}
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          viewport={{ once: true }}
-          className="bg-white rounded-2xl shadow-sm hover:shadow-lg transition duration-300 overflow-hidden"
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+          className="max-w-7xl mx-auto grid lg:grid-cols-[2fr_1fr] rounded-2xl overflow-hidden shadow-xl"
         >
-          {/* HEADER */}
-          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-5 px-6 md:px-10 py-6 border-b border-gray-200">
+          {/* LEFT CONTENT */}
+          <div className="bg-white p-6 sm:p-8 md:p-12 lg:p-14 flex flex-col justify-between">
             <div>
-              <p className="text-xs tracking-[0.2em] uppercase text-gray-500 mb-2">
+              <motion.div
+                variants={fadeUp}
+                className="flex flex-wrap items-center gap-2 text-[10px] sm:text-[11px] tracking-[0.28em] uppercase text-gray-400 mb-5 font-medium"
+              >
+                <span className="text-red-500">✦</span>
                 {stay.location}
-              </p>
+              </motion.div>
 
-              <h2 className="font-serif text-2xl md:text-3xl text-gray-900">
+              <motion.h2
+                variants={fadeUp}
+                className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#2D3E2E] mb-5 leading-tight"
+              >
                 {stay.name}
-              </h2>
+              </motion.h2>
 
-              <p className="text-sm text-gray-600 mt-2 max-w-xl">
-                {stay.tagline}
-              </p>
+              <motion.p
+                variants={fadeUp}
+                className="text-gray-600 leading-relaxed text-sm sm:text-base mb-10 max-w-3xl"
+              >
+                {stay.description}
+              </motion.p>
+
+              {/* Rooms */}
+              <motion.div
+                variants={container}
+                className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-6"
+              >
+                {stay.rooms.map((room, idx) => (
+                  <motion.div
+                    key={idx}
+                    variants={fadeUp}
+                    whileHover={{ y: -6 }}
+                    className="space-y-3"
+                  >
+                    <div className="relative h-52 sm:h-56 overflow-hidden rounded-xl group">
+                      <img
+                        src={room.img}
+                        alt={room.name}
+                        className="w-full h-full object-cover group-hover:scale-105 transition duration-700"
+                      />
+                    </div>
+
+                    <p className="text-[11px] sm:text-xs uppercase tracking-[0.18em] font-semibold text-[#2D3E2E] border-b border-gray-100 pb-2">
+                      {room.name}
+                    </p>
+                  </motion.div>
+                ))}
+              </motion.div>
             </div>
 
-            <button
-              className="relative overflow-hidden group border border-green-900 text-green-900 px-6 py-2 text-xs tracking-[0.18em] uppercase"
+            <motion.button
+              variants={fadeUp}
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.96 }}
               onClick={() => navigate(stay.link)}
+              className="mt-10 bg-[#1A2E1C] text-white px-7 py-4 text-[11px] tracking-[0.22em] uppercase rounded-full w-full sm:w-fit hover:bg-black transition"
             >
-              <span className="relative z-10 group-hover:text-white transition">
-                {stay.btn}
-              </span>
-              <span className="absolute inset-0 bg-green-900 translate-y-full group-hover:translate-y-0 transition duration-300"></span>
-            </button>
+              {stay.btn}
+            </motion.button>
           </div>
 
-          {/* BODY */}
-          <div className="grid lg:grid-cols-3 p-5 gap-6">
-            {/* ROOMS */}
-            {stay.rooms.map((room, idx) => (
-              <div key={idx} className="group ">
-                <div className="overflow-hidden">
-                  <img
-                    src={room.img}
-                    alt={room.name}
-                    className="w-full h-[220px] object-cover group-hover:scale-105 transition duration-500  rounded-xl"
-                  />
-                </div>
-
-                <div className="p-5">
-                  <h3 className="font-semibold text-gray-900 mb-3 text-lg">
-                    {room.name}
-                  </h3>
-
-                  <div className="flex flex-wrap gap-2">
-                    {room.tags.map((tag, t) => (
-                      <span
-                        key={t}
-                        className="text-xs border border-gray-300 px-3 py-1 rounded-full text-gray-600"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
-
-            {/* HIGHLIGHTS */}
-            <div
-              className={`${stay.highlightBg} p-6 md:p-8 flex flex-col justify-center`}
-            >
-              <p className="text-[10px] uppercase tracking-[0.25em] text-yellow-600 mb-5">
+          {/* RIGHT SIDEBAR */}
+          <div className="bg-[#1A2E1C] text-white p-6 sm:p-8 md:p-10 lg:p-12 flex flex-col justify-between">
+            <div>
+              <motion.p
+                variants={fadeUp}
+                className="text-[10px] tracking-[0.22em] uppercase text-gray-400 mb-8 opacity-70 font-bold"
+              >
                 Property Highlights
+              </motion.p>
+
+              <motion.h3
+                variants={fadeUp}
+                className="font-serif italic text-2xl md:text-3xl leading-snug mb-8 text-gray-100"
+              >
+                "{stay.quote}"
+              </motion.h3>
+
+              <motion.div
+                variants={container}
+                className="grid grid-cols-2 gap-3"
+              >
+                {stay.highlights.map((item, idx) => (
+                  <motion.div
+                    key={idx}
+                    variants={fadeUp}
+                    whileHover={{ scale: 1.04 }}
+                    className="border border-white/15 rounded-full px-3 py-2 text-[10px] sm:text-[11px] text-center hover:bg-white/10 transition"
+                  >
+                    {item}
+                  </motion.div>
+                ))}
+              </motion.div>
+            </div>
+
+            {/* Contact */}
+            <motion.div
+              variants={fadeUp}
+              className="mt-12 pt-8 border-t border-white/10 space-y-3"
+            >
+              <p className="text-xs text-gray-400 break-all">
+                ✉ {stay.contactEmail}
               </p>
 
-              <div className="flex flex-wrap gap-3">
-                {stay.highlights.map((h, idx) => (
-                  <span
-                    key={idx}
-                    className="text-sm px-4 py-1.5 rounded-full bg-white/80 border text-gray-700"
-                  >
-                    {h}
-                  </span>
-                ))}
-              </div>
-            </div>
+              <p className="text-xs text-gray-400">📞 {stay.contactPhone}</p>
+            </motion.div>
           </div>
         </motion.div>
       ))}
