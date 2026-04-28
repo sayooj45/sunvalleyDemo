@@ -10,6 +10,8 @@ import Experiences from "./pages/Experiences";
 import Contact from "./pages/Contact";
 import ScrollToTop from "./components/ScrollTOTop";
 import FarmStay from "./pages/FarmStay";
+import HomeStay from "./pages/HomeStay";
+import RoomDetails from "./components/homeStay/RoomDetails";
 function App() {
   return (
     <BrowserRouter>
@@ -23,6 +25,8 @@ function App() {
         {/* <Route path="/experiences" element={<Experiences />} /> */}
         <Route path="/contact" element={<Contact />} />
         <Route path="/farm-stay" element={<FarmStay />} />
+        <Route path="/home-stay" element={<HomeStay />} />
+        <Route path="/rooms/:slug" element={<RoomDetails />} />
       </Routes>
       <Footer />
     </BrowserRouter>

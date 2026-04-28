@@ -9,27 +9,31 @@ const stays = [
   {
     location: "Coonoor · Nilgiris · Tamil Nadu",
     name: "Sunvalley Homestay",
-    tagline: "A peaceful mountain retreat in the tea-garden hills of Coonoor",
+    tagline:
+      "Experience comfort and luxury at Sunvalley Homestay Coonoor with elegant rooms, modern amenities, and a peaceful stay perfect for solo or family trips.",
     btn: "Enquire for Homestay",
+    link: "/home-stay",
     rooms: [
       {
-        name: "Main Block",
-        img: main,
+        name: "Valley View Pent House",
+        img: "https://sunvalleyhomestay.com/wp-content/uploads/2023/07/valley-view-pent-house2.jpg",
         tags: ["En-suite Bath", "Mountain View", "Hot Water"],
       },
       {
-        name: "Garden Room",
-        img: garden,
+        name: "Valley view Executive Room",
+        img: "https://sunvalleyhomestay.com/wp-content/uploads/2021/12/Sunvalley-Homestay-couple-room-1920x1280.jpg",
         tags: ["Private Garden", "WiFi", "Breakfast"],
       },
     ],
     highlights: [
-      "Organic Dining",
-      "Nature Walks",
-      "Tea Garden",
-      "Bonfire",
-      "Parking",
-      "Family Rooms",
+      "Picnic Spot",
+      "Hill-station",
+      "Lamb's Rock",
+      "View point",
+      "Boating",
+      "Swiming",
+      "Tea Planatation",
+      "Ketti Valley",
     ],
     highlightBg: "bg-green-50",
   },
@@ -39,6 +43,7 @@ const stays = [
     tagline:
       "Sunvalley Farmstay — Where nature, family, and authentic farm life come together.",
     btn: "Enquire for Farmstay",
+    link: "/farm-stay",
     rooms: [
       {
         name: "Mithila Room",
@@ -98,7 +103,7 @@ const StayComponent = () => {
 
             <button
               className="relative overflow-hidden group border border-green-900 text-green-900 px-6 py-2 text-xs tracking-[0.18em] uppercase"
-              onClick={() => navigate("/farm-stay")}
+              onClick={() => navigate(stay.link)}
             >
               <span className="relative z-10 group-hover:text-white transition">
                 {stay.btn}

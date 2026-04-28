@@ -5,19 +5,40 @@ import { useNavigate } from "react-router-dom";
 const Rooms = () => {
   const rooms = [
     {
-      name: "Mithila Room",
-      img: "https://sunvalleyfarmstay.com/images/mithila2.png",
-      desc: "Warm and earthy, perfect for couples seeking a peaceful retreat.",
+      name: "Valley View Pent House​",
+      slug: "valley-view-penthouse",
+      img: "https://sunvalleyhomestay.com/wp-content/uploads/2023/07/valley-view-pent-house2.jpg",
+      desc: "Luxury penthouse retreat with panoramic valley views, elegant interiors, private balcony, premium comforts, and a serene unforgettable stay.",
     },
     {
-      name: "Dwarka Room",
-      img: "https://sunvalleyfarmstay.com/images/Dwaraka2.png",
-      desc: "Spacious comfort with serene farm views and natural light.",
+      name: "Earthy Living Valley Room",
+      slug: "earthy-living-valley-room",
+      img: "https://sunvalleyhomestay.com/wp-content/uploads/2023/07/EarthyLivingDeluxe4.jpg",
+      desc: "Cozy double room with earthy charm, natural décor, modern comforts, and a peaceful ambiance for a relaxing stay.",
     },
     {
-      name: "Dwarka Deluxe Room",
-      img: "https://sunvalleyfarmstay.com/images/204.png",
-      desc: "Premium stay with enhanced comfort, privacy, and elegance.",
+      name: "Valley View Deluxe",
+      slug: "valley-view-deluxe-room",
+      img: "https://sunvalleyhomestay.com/wp-content/uploads/2023/07/IMG20230227111353.jpg",
+      desc: "Elegant deluxe suite with panoramic valley views, luxurious interiors, private balcony, and premium comforts for a serene stay.",
+    },
+    {
+      name: "Valley View Executive",
+      slug: "valley-view-executive-room",
+      img: "https://sunvalleyhomestay.com/wp-content/uploads/2021/12/valley-view-executive4-1920x1280.jpg",
+      desc: "Sophisticated executive suite with panoramic valley views, elegant interiors, private balcony, and luxurious comforts for a memorable stay.",
+    },
+    {
+      name: "Valley View Deluxe Family",
+      slug: "valley-view-deluxe-family-room",
+      img: "https://sunvalleyhomestay.com/wp-content/uploads/2023/07/Sunvalley-valleyview-executive-family4.jpg",
+      desc: "Spacious deluxe family room with stunning valley views, elegant décor, and cozy comforts perfect for unforgettable family stays.",
+    },
+    {
+      name: "Valley view Executive Family",
+      slug: "valley-view-executive-family-room",
+      img: "https://sunvalleyhomestay.com/wp-content/uploads/2021/12/valley-view-executive-family5-1920x1280.jpg",
+      desc: "Spacious executive family suite with panoramic valley views, stylish interiors, and modern comforts for memorable family stays.",
     },
   ];
 
@@ -82,14 +103,11 @@ const RoomRow = ({ room, reverse }) => {
         <p className="text-white/60 text-sm md:text-base leading-relaxed mb-6">
           {room.desc}
         </p>
-
         <button
           className="text-gl text-sm uppercase tracking-widest border-b border-gl/50 pb-1 hover:opacity-80 transition"
-          onClick={() => {
-            navigate("/contact");
-          }}
+          onClick={() => navigate(`/rooms/${room.slug}`)}
         >
-          Book Now →
+          View Room →
         </button>
       </div>
     </motion.div>
