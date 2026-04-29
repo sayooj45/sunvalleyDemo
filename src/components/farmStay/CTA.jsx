@@ -81,7 +81,7 @@ const CTA = () => {
                   Location Hub
                 </p>
                 <p className="text-xs text-white/60">
-                  Navigate to Sun Valley Estates
+                  Navigate to Sunvalley Estates
                 </p>
               </div>
               <div className="h-2 w-2 rounded-full bg-red-500 animate-pulse"></div>
@@ -93,7 +93,7 @@ const CTA = () => {
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3921.366657960132!2d76.8069808758652!3d10.693116360523277!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba815bc98641973%3A0x164f24e1caa8b877!2sSunvalley%20Farmstay%20Palakkad!5e0!3m2!1sen!2sin!4v1714321000000!5m2!1sen!2sin"
                 className="w-full h-full"
                 loading="lazy"
-                title="Sun Valley Map"
+                title="Sunvalley Map"
                 style={{
                   border: 0,
                   filter:

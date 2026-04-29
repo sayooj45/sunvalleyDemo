@@ -38,7 +38,7 @@ const Footer = () => {
       >
         {/* BRAND */}
         <motion.div variants={item}>
-          <img src="/logo.png" alt="Sun Valley" className="h-10 mb-4" />
+          <img src="/logo.png" alt="Sunvalley" className="h-10 mb-4" />
 
           <p className="text-sm text-white/70 leading-relaxed">
             A sustainable hospitality brand with two distinct stays — Homestay
@@ -88,12 +88,15 @@ const Footer = () => {
           </h4>
 
           <ul className="space-y-2 text-sm text-white/70">
-            {["Homestay — Coonoor", "Farmstay — Palakkad"].map((text, i) => (
+            {[
+              { name: "Homestay — Coonoor", path: "/home-stay" },
+              { name: "Farmstay — Palakkad", path: "/farm-stay" },
+            ].map((link, i) => (
               <li
                 key={i}
-                className="hover:text-white transition cursor-pointer"
+                className="hover:text-white transition cursor-pointer hover:underline"
               >
-                {text}
+                <Link to={link.path}>{link.name}</Link>
               </li>
             ))}
           </ul>
@@ -127,7 +130,7 @@ const Footer = () => {
         viewport={{ once: true }}
         className="border-t border-white/10 pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-white/50 gap-2"
       >
-        <p>© 2025 Sun Valley. All rights reserved.</p>
+        <p>© 2025 Sunvalley. All rights reserved.</p>
         <p>Creating Sustainable Living Concepts</p>
       </motion.div>
     </footer>

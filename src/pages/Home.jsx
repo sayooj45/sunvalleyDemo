@@ -5,10 +5,10 @@ import Experience from "../components/home/Experience";
 import WhyChooseUs from "../components/home/WhyChooseUs";
 import Review from "../components/home/Review";
 import Gallery from "../components/home/Gallery";
-import HeroAbout from "../components/about/Hero";
-import Stats from "../components/about/Stats";
-import Founders from "../components/about/Founders";
-import Philosophy from "../components/about/Philosophy";
+import HeroAbout from "../components/home/AboutHero";
+import Stats from "../components/home/Stats";
+import Founders from "../components/home/Founders";
+import Philosophy from "../components/home/Philosophy";
 import FeaturedBrands from "../components/home/FeaturedBrands";
 
 const Home = () => {

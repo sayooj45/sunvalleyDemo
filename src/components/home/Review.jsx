@@ -58,15 +58,15 @@ const Review = () => {
       {/* Slider */}
       <div className="relative mt-14 overflow-hidden">
         {/* Fade */}
-        <div className="absolute left-0 top-0 h-full w-20 bg-gradient-to-r from-[#f7f5f2] to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 h-full w-20 bg-gradient-to-l from-[#f7f5f2] to-transparent z-10 pointer-events-none" />
+        {/* <div className="absolute left-0 top-0 h-full w-20 bg-gradient-to-r from-[#f7f5f2] to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 h-full w-20 bg-gradient-to-l from-[#f7f5f2] to-transparent z-10 pointer-events-none" /> */}
 
         <div className="marquee">
           <div className="marquee-track">
             {[...data, ...data].map((item, i) => (
               <motion.div
                 key={i}
-                whileHover={{ y: -8, scale: 1.02 }}
+                // whileHover={{ y: -8, scale: 1.02 }}
                 transition={{ duration: 0.3 }}
                 className="min-w-[260px] sm:min-w-[320px] md:min-w-[360px]"
               >

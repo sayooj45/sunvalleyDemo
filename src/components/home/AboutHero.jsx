@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import about from "../images/about/about.jpg";
+import about from "../images/home/about.jpg";
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
   show: (i = 1) => ({
@@ -46,7 +46,7 @@ const Hero = () => {
                        text-3xl sm:text-4xl md:text-5xl lg:text-[3.2rem] 
                        leading-tight mb-5 text-greenDark"
           >
-            About Sun Valley
+            About Sunvalley
           </motion.h1>
 
           <motion.p
@@ -57,10 +57,10 @@ const Hero = () => {
             custom={2}
             className="text-sm sm:text-base text-gray-600 leading-relaxed mb-4"
           >
-            Sun Valley was born from a belief that travel should reconnect
-            people with nature, community, and authentic living. What began as a
-            single homestay in the Nilgiris has grown into a two-property
-            sustainable hospitality brand spanning Tamil Nadu and Kerala.
+            Sunvalley was born from a belief that travel should reconnect people
+            with nature, community, and authentic living. What began as a single
+            homestay in the Nilgiris has grown into a two-property sustainable
+            hospitality brand spanning Tamil Nadu and Kerala.
           </motion.p>
 
           <motion.p
@@ -122,7 +122,7 @@ const Hero = () => {
         >
           <motion.img
             src={about}
-            alt="Sun Valley"
+            alt="Sunvalley"
             className="w-full 
                        h-[260px] sm:h-[320px] md:h-[400px] lg:h-[520px] 
                        object-cover rounded-md"

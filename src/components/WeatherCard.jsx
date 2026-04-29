@@ -6,10 +6,11 @@ const WeatherCard = ({ city }) => {
 
   useEffect(() => {
     const fetchWeather = async () => {
-      const API_KEY = "af1c4c5149ef2b4814e93e7936222261";
       try {
         const res = await fetch(
-          `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}`
+          `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${
+            import.meta.env.VITE_WEATHER_API_KEY
+          }`
         );
         const data = await res.json();
         setWeather(data);

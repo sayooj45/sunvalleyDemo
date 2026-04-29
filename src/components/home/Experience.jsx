@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import homestay from "../images/home/homestay.jpg";
-import farmstay from "../images/home/farmstay.jpg";
+import farmstay from "../images/home/farmstay.png";
 import { useNavigate } from "react-router-dom";
 
 const data = [
@@ -68,7 +68,7 @@ const Experience = () => {
         viewport={{ once: true }}
         className="font-serif text-3xl sm:text-4xl md:text-5xl text-green-900 mb-4 leading-tight"
       >
-        The Sun Valley Experience
+        The Sunvalley Experience
       </motion.h2>
 
       <motion.p
