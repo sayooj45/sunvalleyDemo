@@ -44,7 +44,7 @@ const CTA = () => {
 
             <div className="flex flex-wrap gap-4 pt-4">
               <motion.a
-                href="https://api.whatsapp.com/send?phone=919582598568"
+                href="https://api.whatsapp.com/send?phone=919400514510"
                 whileHover={{ y: -3 }}
                 className="bg-gold text-[#1A2E1C] px-8 py-4 rounded-sm text-[10px] font-bold uppercase tracking-[0.2em] shadow-xl"
               >
@@ -52,7 +52,7 @@ const CTA = () => {
               </motion.a>
 
               <motion.a
-                href="tel:+919582598568"
+                href="tel:+919400514510"
                 whileHover={{ y: -3 }}
                 className="border border-white/20 text-white px-8 py-4 rounded-sm text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-all"
               >

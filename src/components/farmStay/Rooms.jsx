@@ -1,23 +1,21 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-
+import villa1 from "../images/farmStay/villa1.jpg";
+import villa2 from "../images/farmStay/villa2.jpg";
 const Rooms = () => {
   const rooms = [
     {
-      name: "Mithila Room",
-      img: "https://sunvalleyfarmstay.com/images/mithila2.png",
+      name: "Mithila villa",
+      img: villa1,
+      slug: "Mithila-villa",
       desc: "Warm and earthy, perfect for couples seeking a peaceful retreat.",
     },
     {
-      name: "Dwarka Room",
-      img: "https://sunvalleyfarmstay.com/images/Dwaraka2.png",
+      name: "Dwarka villa",
+      img: villa2,
+      slug: "Dwarka-villa",
       desc: "Spacious comfort with serene farm views and natural light.",
-    },
-    {
-      name: "Dwarka Deluxe Room",
-      img: "https://sunvalleyfarmstay.com/images/204.png",
-      desc: "Premium stay with enhanced comfort, privacy, and elegance.",
     },
   ];
 
@@ -82,15 +80,13 @@ const RoomRow = ({ room, reverse }) => {
         <p className="text-white/60 text-sm md:text-base leading-relaxed mb-6">
           {room.desc}
         </p>
-        {/* 
+
         <button
           className="text-gl text-sm uppercase tracking-widest border-b border-gl/50 pb-1 hover:opacity-80 transition"
-          onClick={() => {
-            navigate("/contact");
-          }}
+          onClick={() => navigate(`/farm-stay/${room.slug}`)}
         >
-          Book Now →
-        </button> */}
+          View Room →
+        </button>
       </div>
     </motion.div>
   );

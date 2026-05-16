@@ -7,16 +7,15 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "Home", path: "/" },
-    // { name: "About Us", path: "/about" },
+
     { name: "Retreat", path: "/retreat" },
-    // { name: "Restaurant", path: "/restaurant" },
-    // { name: "Experiences", path: "/experiences" },
+
     { name: "Contact", path: "/contact" },
   ];
   const navigate = useNavigate();
 
   return (
-    <nav className="w-full fixed top-0 left-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200">
+    <nav className="w-full fixed top-0 left-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200 font-serif ">
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}

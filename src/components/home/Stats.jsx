@@ -25,7 +25,7 @@ const Counter = ({ end, decimals = 0, suffix = "" }) => {
 
   useEffect(() => {
     let start = 0;
-    const duration = 1800;
+    const duration = 3000;
     const increment = end / (duration / 16);
 
     const timer = setInterval(() => {
@@ -52,9 +52,9 @@ const Counter = ({ end, decimals = 0, suffix = "" }) => {
 
 const stats = [
   { num: 2, suffix: "", label: "Premium Properties" },
-  { num: 500, suffix: "+", label: "Happy Guests" },
+  { num: 2000, suffix: "+", label: "Happy Guests" },
   { num: 4.9, suffix: "", label: "Guest Rating", decimals: 1 },
-  { num: 8, suffix: "+", label: "Years Experience" },
+  { num: 15, suffix: "+", label: "Years Experience" },
 ];
 
 const Stats = () => {

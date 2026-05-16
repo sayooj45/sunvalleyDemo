@@ -11,17 +11,24 @@ const founders = [
   },
   {
     name: "Deepthi Dhinesh",
-    role: "Co-Founder & Guest Experience",
+    role: "Director",
     desc: "Creates a warm, elegant, and welcoming atmosphere that makes every stay memorable.",
     letter: "D",
     color: "bg-yellow-600",
   },
   {
     name: "Shyma Dhinesh",
-    role: "Co-Founder & Host",
+    role: "Founder & Managing Director",
     desc: "The heart of hospitality. She ensures every guest feels at home with care and comfort.",
     letter: "S",
     color: "bg-[#234d2c]",
+  },
+  {
+    name: "Dipin Dhinesh",
+    role: "Director",
+    desc: "Focuses on business growth, guest satisfaction, and operational excellence while strengthening the brand’s commitment to premium hospitality.",
+    letter: "D",
+    color: "bg-[#2f5d3a]",
   },
 ];
 

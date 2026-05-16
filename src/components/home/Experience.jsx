@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import homestay from "../images/home/homestay.jpg";
+import homestay from "../images/home/galleryNew1.jpg";
 import farmstay from "../images/home/farmstay.png";
 import { useNavigate } from "react-router-dom";
 

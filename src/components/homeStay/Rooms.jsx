@@ -105,7 +105,7 @@ const RoomRow = ({ room, reverse }) => {
         </p>
         <button
           className="text-gl text-sm uppercase tracking-widest border-b border-gl/50 pb-1 hover:opacity-80 transition"
-          onClick={() => navigate(`/rooms/${room.slug}`)}
+          onClick={() => navigate(`/home-stay/${room.slug}`)}
         >
           View Room →
         </button>

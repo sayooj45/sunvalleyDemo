@@ -45,7 +45,7 @@ const rooms = [
   {
     slug: "valley-view-deluxe-room",
     name: "Valley View Deluxe Room",
-    img: "https://sunvalleyhomestay.com/wp-content/uploads/2023/07/EarthyLivingDeluxe4.jpg",
+    img: "https://sunvalleyhomestay.com/wp-content/uploads/2023/07/IMG20230227111353.jpg",
     desc: "Elegant deluxe suite with panoramic valley views, luxurious interiors, private balcony, and premium comforts for a serene stay..",
     longDesc: [
       "Be captivated from the moment you step foot into the Valley View Deluxe suite. Immerse yourself in a realm of refined elegance and supreme comfort, designed to provide you with an unforgettable stay.",

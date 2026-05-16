@@ -1,6 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
-
+import hut from "../images/farmStay/hutNew.jpg";
+import duck from "../images/farmStay/duck.jpg";
+import playing from "../images/farmStay/playingNew.jpg";
+import pool from "../images/farmStay/poolNew.jpg";
+import first from "../images/farmStay/clay.jpg";
 /* animation system */
 const container = {
   hidden: {},
@@ -51,17 +55,14 @@ const Overview = () => {
           {/* main */}
           <motion.img
             variants={imgAnim}
-            src="https://sunvalleyfarmstay.com/images/sunvalley-farms-palakkad.jpg"
+            // src="https://sunvalleyfarmstay.com/images/sunvalley-farms-palakkad.jpg"
+            src={first}
             className="col-span-2 rounded-lg aspect-video object-cover 
             hover:scale-[1.03] transition duration-700"
           />
 
           {/* others */}
-          {[
-            "https://sunvalleyfarmstay.com/images/farmstay-in-palakkad.jpg",
-            "https://sunvalleyfarmstay.com/images/deluxe-room-at-palakkad.jpg",
-            "https://sunvalleyfarmstay.com/images/mithila2.png",
-          ].map((img, i) => (
+          {[hut, pool, duck, playing].map((img, i) => (
             <motion.img
               key={i}
               variants={imgAnim}

@@ -9,6 +9,7 @@ import {
   FiClock,
 } from "react-icons/fi";
 
+/* animations */
 const fadeUp = {
   hidden: { opacity: 0, y: 35 },
   show: {
@@ -21,73 +22,64 @@ const fadeUp = {
 const stagger = {
   hidden: {},
   show: {
-    transition: {
-      staggerChildren: 0.12,
-    },
+    transition: { staggerChildren: 0.12 },
   },
 };
 
+/* INFO DATA */
 const infoData = [
   {
     icon: <FiPhone />,
     title: "Call Us",
     desc: "Speak directly with our team",
     content: (
-      <>
-        <a href="tel:+919582598568" className="block hover:text-[#b58a2b]">
-          +91 95825 98568
+      <div className="space-y-2">
+        <a href="tel:+919400514510" className="block hover:text-[#b58a2b]">
+          🌿 Farmstay — +91 94005 14510
         </a>
-        <a href="tel:+919496295590" className="block hover:text-[#b58a2b]">
-          +91 94962 95590
+        <a href="tel:+919629795590" className="block hover:text-[#b58a2b]">
+          🏡 Homestay — +91 88258 77432
         </a>
-      </>
+      </div>
     ),
   },
+
   {
     icon: <FiMessageCircle />,
     title: "WhatsApp",
-    desc: "Quick bookings & enquiries",
+    desc: "Instant chat & quick booking",
     content: (
-      <a
-        href="https://wa.me/919629795590"
-        target="_blank"
-        rel="noreferrer"
-        className="hover:text-[#b58a2b]"
-      >
-        +91 96297 95590
-      </a>
-    ),
-  },
-  {
-    icon: <FiMail />,
-    title: "Email",
-    desc: "Write to us anytime",
-    content: (
-      <>
+      <div className="space-y-2">
         <a
-          href="mailto:sunvalleyhomestay@gmail.com"
+          href="https://wa.me/919400514510?text=Hi%20I%20am%20interested%20in%20Farmstay%20booking"
+          target="_blank"
+          rel="noreferrer"
           className="block hover:text-[#b58a2b]"
         >
-          sunvalleyhomestay@gmail.com
+          🌿 Farmstay Chat
         </a>
+
         <a
-          href="mailto:info@sunvalley.co.in"
+          href="https://wa.me/919629795590?text=Hi%20I%20am%20interested%20in%20Homestay%20booking"
+          target="_blank"
+          rel="noreferrer"
           className="block hover:text-[#b58a2b]"
         >
-          info@sunvalley.co.in
+          🏡 Homestay Chat
         </a>
-      </>
+      </div>
     ),
   },
+
   {
     icon: <FiMapPin />,
     title: "Locations",
     desc: "Two beautiful destinations",
     content: (
-      <>
-        <p>Coonoor, Tamil Nadu</p>
-        <p>Palakkad, Kerala</p>
-      </>
+      <div className="space-y-1 text-sm">
+        <p>🏡 Coonoor, Tamil Nadu</p>
+        <p>🌿 Palakkad, Kerala</p>
+      </div>
     ),
   },
 ];
@@ -100,7 +92,7 @@ const Contact = () => {
       <div className="absolute bottom-0 right-0 w-72 h-72 bg-[#1d3b2a]/10 blur-[120px] rounded-full" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 py-16 md:py-24">
-        {/* Header */}
+        {/* HEADER */}
         <motion.div
           initial="hidden"
           whileInView="show"
@@ -112,19 +104,19 @@ const Contact = () => {
             Get In Touch
           </p>
 
-          <h1 className="text-4xl md:text-6xl font-serif text-[#173321] leading-tight mb-5">
+          <h1 className="text-4xl md:text-6xl font-serif tracking-tight text-[#173321] leading-tight mb-5">
             Contact Sunvalley
           </h1>
 
           <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
-            Whether you're dreaming of misty mountain mornings or peaceful farm
-            sunsets, our team is ready to help you plan the perfect stay.
+            Plan your perfect escape — whether it’s misty hills or peaceful
+            farmlands, we’re here to help.
           </p>
         </motion.div>
 
-        {/* Main Layout */}
+        {/* MAIN */}
         <div className="grid lg:grid-cols-[1fr_0.95fr] gap-10 xl:gap-14 items-start">
-          {/* Left Side */}
+          {/* LEFT */}
           <motion.div
             initial="hidden"
             whileInView="show"
@@ -132,16 +124,16 @@ const Contact = () => {
             variants={stagger}
             className="space-y-6"
           >
-            {/* Info Cards */}
+            {/* INFO CARDS */}
             <div className="grid sm:grid-cols-2 gap-5">
               {infoData.map((item, i) => (
                 <motion.div
                   key={i}
                   variants={fadeUp}
-                  whileHover={{ y: -5 }}
-                  className="bg-white/90 backdrop-blur rounded-3xl p-6 border border-white shadow-md hover:shadow-xl transition"
+                  whileHover={{ y: -6 }}
+                  className="bg-white/90 backdrop-blur rounded-3xl p-6 border border-white shadow-md hover:shadow-2xl transition duration-300"
                 >
-                  <div className="w-12 h-12 rounded-2xl bg-[#eef5ef] text-[#173321] flex items-center justify-center text-xl mb-4">
+                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#eef5ef] to-[#f8faf7] text-[#173321] flex items-center justify-center text-xl mb-4">
                     {item.icon}
                   </div>
 
@@ -151,14 +143,14 @@ const Contact = () => {
 
                   <p className="text-xs text-gray-500 mb-3">{item.desc}</p>
 
-                  <div className="text-sm text-gray-800 space-y-1 leading-relaxed font-medium">
+                  <div className="text-sm text-gray-800 space-y-1 font-medium">
                     {item.content}
                   </div>
                 </motion.div>
               ))}
             </div>
 
-            {/* Extra Card */}
+            {/* EXTRA CARD */}
             <motion.div
               variants={fadeUp}
               className="bg-[#173321] text-white rounded-3xl p-7 shadow-xl"
@@ -175,13 +167,13 @@ const Contact = () => {
               </h3>
 
               <p className="text-white/70 text-sm leading-relaxed">
-                Contact us for room availability, rates, special packages,
-                family bookings, or long-stay offers.
+                Contact us for availability, pricing, group bookings, or special
+                packages.
               </p>
             </motion.div>
           </motion.div>
 
-          {/* Right Form */}
+          {/* RIGHT FORM */}
           <motion.div
             initial={{ opacity: 0, x: 45 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -198,7 +190,7 @@ const Contact = () => {
             </h2>
 
             <p className="text-sm text-gray-500 mb-7">
-              Fill in your details and our team will contact you shortly.
+              Fill your details and we’ll get back shortly.
             </p>
 
             <form className="space-y-4">
@@ -206,23 +198,23 @@ const Contact = () => {
                 <input
                   type="text"
                   placeholder="Your Name"
-                  className="w-full rounded-2xl border border-gray-200 px-4 py-3 bg-[#fafaf7] focus:outline-none focus:ring-2 focus:ring-[#173321]"
+                  className="w-full rounded-2xl border border-gray-200 px-4 py-3 bg-[#fafaf7] focus:ring-2 focus:ring-[#173321] outline-none"
                 />
 
                 <input
                   type="tel"
                   placeholder="Phone Number"
-                  className="w-full rounded-2xl border border-gray-200 px-4 py-3 bg-[#fafaf7] focus:outline-none focus:ring-2 focus:ring-[#173321]"
+                  className="w-full rounded-2xl border border-gray-200 px-4 py-3 bg-[#fafaf7] focus:ring-2 focus:ring-[#173321] outline-none"
                 />
               </div>
 
               <input
                 type="email"
                 placeholder="Email Address"
-                className="w-full rounded-2xl border border-gray-200 px-4 py-3 bg-[#fafaf7] focus:outline-none focus:ring-2 focus:ring-[#173321]"
+                className="w-full rounded-2xl border border-gray-200 px-4 py-3 bg-[#fafaf7] focus:ring-2 focus:ring-[#173321] outline-none"
               />
 
-              <select className="w-full rounded-2xl border border-gray-200 px-4 py-3 bg-[#fafaf7] focus:outline-none">
+              <select className="w-full rounded-2xl border border-gray-200 px-4 py-3 bg-[#fafaf7]">
                 <option>Select Stay Preference</option>
                 <option>Homestay — Coonoor</option>
                 <option>Farmstay — Palakkad</option>
@@ -251,25 +243,35 @@ const Contact = () => {
               />
 
               <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="w-full bg-[#173321] text-white py-3.5 rounded-2xl flex items-center justify-center gap-2 uppercase tracking-[0.22em] text-xs hover:bg-[#0f2417] transition"
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
+                className="w-full bg-[#173321] text-white py-3.5 rounded-2xl flex items-center justify-center gap-2 uppercase tracking-[0.22em] text-xs hover:bg-[#0f2417] transition shadow-lg"
               >
                 Send Message <FiSend />
               </motion.button>
 
               <a
-                href="https://wa.me/919629795590"
+                href="https://wa.me/919400514510?text=Hi%20I%20want%20to%20book%20a%20stay"
                 target="_blank"
                 rel="noreferrer"
-                className="block text-center text-sm font-medium text-[#173321] hover:text-[#b58a2b] transition"
+                className="block text-center text-sm font-semibold text-[#173321] hover:text-[#25D366] transition"
               >
-                Or contact instantly via WhatsApp →
+                💬 Chat on WhatsApp for instant booking
               </a>
             </form>
           </motion.div>
         </div>
       </div>
+
+      {/* FLOATING WHATSAPP */}
+      <a
+        href="https://wa.me/919400514510"
+        target="_blank"
+        rel="noreferrer"
+        className="fixed bottom-6 right-6 bg-[#25D366] text-white p-4 rounded-full shadow-xl hover:scale-110 transition z-50"
+      >
+        <FiMessageCircle size={22} />
+      </a>
     </section>
   );
 };

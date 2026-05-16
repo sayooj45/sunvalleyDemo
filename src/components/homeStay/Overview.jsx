@@ -1,4 +1,8 @@
 import React from "react";
+import jeep from "../images/homeStay/jeep.jpg";
+import night from "../images/homeStay/night.jpg";
+import view3 from "../images/homeStay/view3.jpg";
+import playing from "../images/homeStay/playing.jpg";
 import { motion } from "framer-motion";
 
 /* animation system */
@@ -57,11 +61,7 @@ const Overview = () => {
           />
 
           {/* others */}
-          {[
-            "https://sunvalleyhomestay.com/wp-content/uploads/2021/12/valley-view-executive4-1920x1280.jpg",
-            "https://sunvalleyhomestay.com/wp-content/uploads/2023/07/IMG20230227111353.jpg",
-            "https://sunvalleyhomestay.com/wp-content/uploads/2023/07/valley-view-pent-house2.jpg",
-          ].map((img, i) => (
+          {[jeep, view3, playing, night].map((img, i) => (
             <motion.img
               key={i}
               variants={imgAnim}
@@ -86,7 +86,9 @@ const Overview = () => {
             className="text-3xl sm:text-4xl md:text-5xl font-serif leading-tight"
           >
             A Home{" "}
-            <span className="italic text-ga font-display">in the Hills</span>
+            <span className="italic text-ga font-display">
+              Rooted in Nature
+            </span>
           </motion.h2>
 
           <motion.div variants={item} className="w-12 h-[3px] bg-gold mt-4" />
@@ -95,30 +97,63 @@ const Overview = () => {
             variants={item}
             className="mt-6 text-tb text-sm md:text-base leading-relaxed"
           >
-            Sunvalley Homestay is located in Ottupattarai, Coonoor-Ooty, Tamil
-            Nadu - 643105, India. Our holiday home is ideal for nature lovers
-            seeking a peaceful escape away from city pollution and crowds,
-            surrounded by breathtaking views and refreshing natural beauty.
+            Sunvalley Homestay is nestled in the serene landscapes of
+            Ottupattarai, near Coonoor–Ooty in Tamil Nadu, offering a perfect
+            blend of comfort, nature, and peaceful living. Surrounded by lush
+            green hills, misty valleys, and fresh mountain air, our homestay is
+            an ideal retreat for travelers looking to escape the noise and
+            stress of city life.
           </motion.p>
 
           <motion.p
             variants={item}
             className="mt-4 text-tb text-sm md:text-base leading-relaxed"
           >
-            As you arrive, you’ll be welcomed with warm hospitality and a homely
-            ambiance. Our dedicated staff ensures your stay is comfortable,
-            relaxing, and truly memorable.
+            Our property is thoughtfully designed to provide a relaxing and
+            memorable stay experience. With well-maintained luxury rooms, modern
+            amenities, and spacious interiors, guests can enjoy both comfort and
+            elegance in the heart of nature. Large windows and balconies open up
+            to breathtaking views, allowing you to wake up to the beauty of the
+            hills every day.
+          </motion.p>
+
+          <motion.p
+            variants={item}
+            className="mt-4 text-tb text-sm md:text-base leading-relaxed"
+          >
+            Sunvalley Homestay is perfect for families, couples, and groups
+            seeking a calm and refreshing getaway. Whether you're planning a
+            peaceful vacation, a short weekend break, or a nature-filled
+            holiday, our location offers easy access to nearby attractions while
+            still maintaining complete privacy and tranquility.
+          </motion.p>
+
+          <motion.p
+            variants={item}
+            className="mt-4 text-tb text-sm md:text-base leading-relaxed"
+          >
+            From the moment you arrive, you’ll be welcomed with warm hospitality
+            and a homely atmosphere. Our dedicated team ensures personalized
+            service, making sure every guest feels comfortable, relaxed, and
+            well taken care of throughout their stay.
+          </motion.p>
+
+          <motion.p
+            variants={item}
+            className="mt-4 text-tb text-sm md:text-base leading-relaxed"
+          >
+            Enjoy the calmness of nature, the charm of hill station living, and
+            the comfort of a home away from home at Sunvalley Homestay.
           </motion.p>
 
           {/* STATS */}
           <motion.div
             variants={item}
-            className="grid grid-cols-2 sm:grid-cols-4 mt-8 border border-gd/20 rounded-lg overflow-hidden"
+            className="grid grid-cols-1 sm:grid-cols-3 mt-8 border border-gd/20 rounded-lg overflow-hidden divide-y sm:divide-y-0 sm:divide-x divide-gd/20"
           >
-            <Stat num="6" label="Luxury Rooms" />
-            <Stat num="21" label="Guests Stay" />
-            <Stat num="40m" label="From Main Block" />
-            <Stat num="₹15k+" label="Packages Start" />
+            <Stat num="22" label="Luxury Rooms" />
+            <Stat num="96" label="Guests Stay" />
+            <Stat num="₹6k+" label="Packages Start" />
           </motion.div>
         </motion.div>
       </motion.div>

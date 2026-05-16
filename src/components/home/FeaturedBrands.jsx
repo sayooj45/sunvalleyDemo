@@ -10,7 +10,7 @@ const data = [
     link: "https://www.sunvalleytransit.com/",
   },
   {
-    title: "Sun 'N' More Palgap",
+    title: "Sun 'N' More powered by Palgap",
     desc: "Inspired by the Palakkad Gap, Palgap brings authentic, nutrient-rich meals crafted with modern food safety and responsible practices you can trust.",
     image: sunNMore,
     link: "https://sunnmore.palgap.com/",

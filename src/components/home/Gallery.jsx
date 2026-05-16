@@ -1,11 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import gallery1 from "../images/home/gallery1.jpg";
-import gallery2 from "../images/home/gallery2.jpg";
+import gallery2 from "../images/home/galleryNew2.jpg";
 import gallery3 from "../images/home/gallery3.jpg";
-import gallery4 from "../images/home/gallery4.jpg";
-import gallery5 from "../images/home/gallery5.jpg";
-import gallery6 from "../images/home/gallery6.jpg";
+import gallery4 from "../images/home/gallery2.jpg";
+import gallery5 from "../images/home/galleryNew5.jpg";
+import gallery6 from "../images/home/galleryNew3.jpg";
 const images = [gallery2, gallery1, gallery3, gallery4, gallery5, gallery6];
 
 // container stagger

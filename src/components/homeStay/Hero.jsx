@@ -63,9 +63,9 @@ const Hero = () => {
             </motion.p>
 
             <div className="grid grid-cols-3 gap-3 mt-8">
-              <Stat value="21" label="Guests" />
-              <Stat value="06" label="Rooms" />
-              <Stat value="₹15k+" label="Start" />
+              <Stat value="96" label="Guests" />
+              <Stat value="22" label="Rooms" />
+              <Stat value="₹6k+" label="Start" />
             </div>
           </div>
 
@@ -116,9 +116,9 @@ const Hero = () => {
           </p>
 
           <div className="grid grid-cols-3 gap-8 max-w-md mx-auto mt-8">
-            <Stat value="21" label="Guests" />
-            <Stat value="06" label="Rooms" />
-            <Stat value="₹15k+" label="Start" />
+            <Stat value="96" label="Guests" />
+            <Stat value="22" label="Rooms" />
+            <Stat value="₹6k+" label="Start" />
           </div>
         </div>
 

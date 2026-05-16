@@ -19,10 +19,9 @@ const item = {
 
 const navLinks = [
   { name: "Home", path: "/" },
-  // { name: "About Us", path: "/about" },
+
   { name: "Retreat", path: "/retreat" },
-  // { name: "Restaurant", path: "/restaurant" },
-  // { name: "Experiences", path: "/experiences" },
+
   { name: "Contact", path: "/contact" },
 ];
 
@@ -109,12 +108,16 @@ const Footer = () => {
           </h4>
 
           <ul className="space-y-2 text-sm text-white/70">
-            <li className="hover:text-white transition">📞 +91 95825 98568</li>
+            <li className="hover:text-white transition">📞 +91 96297 95590 </li>
+            <li className="hover:text-white transition">📞 +91 94005 14510 </li>
             <li className="hover:text-white transition cursor-pointer">
               WhatsApp Us
             </li>
             <li className="hover:text-white transition">
-              ✉ info@sunvalley.co.in
+              ✉ sunvalleyhomestay@gmail.com
+            </li>
+            <li className="hover:text-white transition">
+              ✉ sunvalleyfarmstay@gmail.com
             </li>
             <li>Coonoor, Tamil Nadu</li>
             <li>Palakkad, Kerala</li>

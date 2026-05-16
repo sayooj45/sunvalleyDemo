@@ -11,7 +11,7 @@ const stays = [
     btn: "Enquire for Homestay",
     link: "/home-stay",
     contactEmail: "sunvalleyhomestay@gmail.com",
-    contactPhone: "+91 95825 98568",
+    contactPhone: "+91 96297 95590",
     quote: "Where every morning begins with mountain mist.",
     rooms: [
       {
@@ -50,7 +50,7 @@ const stays = [
     btn: "Enquire for Farmstay",
     link: "/farm-stay",
     contactEmail: "sunvalleyfarmstay@gmail.com",
-    contactPhone: "+91 88258 77432",
+    contactPhone: "+91 94005 14510 ",
     quote: "Where farm life meets heartfelt hospitality.",
     rooms: [
       {

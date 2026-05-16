@@ -1,20 +1,26 @@
 import React from "react";
 import { motion } from "framer-motion";
+import thirdImg from "../images/farmStay/bannerThird.jpg";
+
+import firstImg from "../images/farmStay/bannerFirst.jpg";
 
 const Hero = () => {
   const panels = [
     {
-      img: "https://www.sunvalleyfarmstay.com/images/gallery/51.jpg",
+      // img: "https://www.sunvalleyfarmstay.com/images/gallery/51.jpg",
+      img: firstImg,
       location: "Chittur, Palakkad - Kerala",
       tag: "10 Acres · Kerala",
     },
     {
       img: "https://www.sunvalleyfarmstay.com/images/gallery/2024-aug-6.png",
+      // img: secondImg,
       location: "Organic Farm Views",
       tag: "Nature · Farmstay",
     },
     {
-      img: "https://www.sunvalleyfarmstay.com/images/paddy-field-work.jpg",
+      // img: "https://www.sunvalleyfarmstay.com/images/paddy-field-work.jpg",
+      img: thirdImg,
       location: "Peaceful Farm Houses",
       tag: "Relax · Retreat",
     },
@@ -121,7 +127,7 @@ const Hero = () => {
 
           <div className="grid grid-cols-3 gap-8 max-w-md mx-auto mt-8">
             <Stat value="2" label="Houses" />
-            <Stat value="6" label="Rooms" />
+            <Stat value="8" label="Rooms" />
             <Stat value="10" label="Acres" />
           </div>
         </div>

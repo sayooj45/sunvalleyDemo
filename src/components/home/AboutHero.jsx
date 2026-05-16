@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import about from "../images/home/about.jpg";
+import about from "../images/home/aboutNew.jpg";
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
   show: (i = 1) => ({

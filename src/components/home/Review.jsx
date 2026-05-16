@@ -6,27 +6,33 @@ import { useNavigate } from "react-router-dom";
 const data = [
   {
     video: "https://www.youtube.com/watch?v=82LyxDqcx6I",
-    preview: "/videos/first.mp4",
+    preview:
+      "https://sunvalley.blr1.cdn.digitaloceanspaces.com/contents/third_1.mp4",
   },
   {
     video: "https://www.youtube.com/watch?v=cUWVwRUufZo",
-    preview: "/videos/second.mp4",
+    preview:
+      "https://sunvalley.blr1.cdn.digitaloceanspaces.com/contents/second_1.mp4",
   },
   {
     video: "https://www.youtube.com/watch?v=VjMAYdKbjMw",
-    preview: "/videos/third.mp4",
+    preview:
+      "https://sunvalley.blr1.cdn.digitaloceanspaces.com/contents/first_1.mp4",
   },
   {
     video: "https://www.youtube.com/watch?v=jNsOBDYSHwY",
-    preview: "/videos/four.mp4",
+    preview:
+      "https://sunvalley.blr1.cdn.digitaloceanspaces.com/contents/happy-guest-happier-us-sunvalley-farmstay-chittur-palakkad-testimonial-resort-room-1080-ytshorts.savetube.me_1_1.mp4",
   },
   {
     video: "https://www.youtube.com/watch?v=ty-y4f7D3ik",
-    preview: "/videos/five.mp4",
+    preview:
+      "https://sunvalley.blr1.cdn.digitaloceanspaces.com/contents/five.mp4",
   },
   {
     video: "https://www.youtube.com/watch?v=aptgMkijO6g",
-    preview: "/videos/six.mp4",
+    preview:
+      "https://sunvalley.blr1.cdn.digitaloceanspaces.com/contents/guest-review-sunvalleyfarmstay-resort-chittur-resort-farmstay-palakkad-keralatourism-1080-ytshorts.savetube.me_1.mp4",
   },
 ];
 
@@ -58,8 +64,8 @@ const Review = () => {
       {/* Slider */}
       <div className="relative mt-14 overflow-hidden">
         {/* Fade */}
-        {/* <div className="absolute left-0 top-0 h-full w-20 bg-gradient-to-r from-[#f7f5f2] to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 h-full w-20 bg-gradient-to-l from-[#f7f5f2] to-transparent z-10 pointer-events-none" /> */}
+        {/* <div className="absolute left-0 top-0 h-full w-20 bg-gradient-to-r from-[#f7f5f2] to-transparent z-10 pointer-events-none" /> */}
+        {/* <div className="absolute right-0 top-0 h-full w-20 bg-gradient-to-l from-[#f7f5f2] to-transparent z-10 pointer-events-none" /> */}
 
         <div className="marquee">
           <div className="marquee-track">

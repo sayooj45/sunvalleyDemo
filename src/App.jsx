@@ -11,6 +11,8 @@ import ScrollToTop from "./components/ScrollTOTop";
 import FarmStay from "./pages/FarmStay";
 import HomeStay from "./pages/HomeStay";
 import RoomDetails from "./components/homeStay/RoomDetails";
+import ErrorPage from "./pages/ErrorPage";
+import FarmStayRoomDetails from "./components/farmStay/RoomDetails";
 function App() {
   return (
     <BrowserRouter>
@@ -22,7 +24,9 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/farm-stay" element={<FarmStay />} />
         <Route path="/home-stay" element={<HomeStay />} />
-        <Route path="/rooms/:slug" element={<RoomDetails />} />
+        <Route path="/home-stay/:slug" element={<RoomDetails />} />
+        <Route path="/farm-stay/:slug" element={<FarmStayRoomDetails />} />
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
       <Footer />
     </BrowserRouter>
